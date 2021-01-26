@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.phoenixhell.test.Junit5Test
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.177 s <<< FAILURE! - in com.phoenixhell.test.Junit5Test
+test2  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: this a  error message ==> expected: <1> but was: <2>
+	at com.phoenixhell.test.Junit5Test.test2(Junit5Test.java:64)
+

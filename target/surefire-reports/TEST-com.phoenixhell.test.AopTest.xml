@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.phoenixhell.test.AopTest" time="8.715" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="E:\maven\SpringBoot\target\test-classes;E:\maven\SpringBoot\target\classes;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-web\2.3.4.RELEASE\spring-boot-starter-web-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter\2.3.4.RELEASE\spring-boot-starter-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-logging\2.3.4.RELEASE\spring-boot-starter-logging-2.3.4.RELEASE.jar;E:\maven\repmaven\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;E:\maven\repmaven\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;E:\maven\repmaven\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;E:\maven\repmaven\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;E:\maven\repmaven\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;E:\maven\repmaven\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;E:\maven\repmaven\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-json\2.3.4.RELEASE\spring-boot-starter-json-2.3.4.RELEASE.jar;E:\maven\repmaven\com\fasterxml\jackson\core\jackson-databind\2.11.2\jackson-databind-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\core\jackson-annotations\2.11.2\jackson-annotations-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\core\jackson-core\2.11.2\jackson-core-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.2\jackson-datatype-jdk8-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.2\jackson-datatype-jsr310-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.2\jackson-module-parameter-names-2.11.2.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-tomcat\2.3.4.RELEASE\spring-boot-starter-tomcat-2.3.4.RELEASE.jar;E:\maven\repmaven\org\apache\tomcat\embed\tomcat-embed-core\9.0.38\tomcat-embed-core-9.0.38.jar;E:\maven\repmaven\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;E:\maven\repmaven\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.38\tomcat-embed-websocket-9.0.38.jar;E:\maven\repmaven\org\springframework\spring-web\5.2.9.RELEASE\spring-web-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-beans\5.2.9.RELEASE\spring-beans-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-webmvc\5.2.9.RELEASE\spring-webmvc-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-context\5.2.9.RELEASE\spring-context-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-expression\5.2.9.RELEASE\spring-expression-5.2.9.RELEASE.jar;E:\maven\repmaven\org\projectlombok\lombok\1.18.12\lombok-1.18.12.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-actuator\2.3.4.RELEASE\spring-boot-starter-actuator-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-actuator-autoconfigure\2.3.4.RELEASE\spring-boot-actuator-autoconfigure-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-actuator\2.3.4.RELEASE\spring-boot-actuator-2.3.4.RELEASE.jar;E:\maven\repmaven\io\micrometer\micrometer-core\1.5.5\micrometer-core-1.5.5.jar;E:\maven\repmaven\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;E:\maven\repmaven\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-aop\2.3.4.RELEASE\spring-boot-starter-aop-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-aop\5.2.9.RELEASE\spring-aop-5.2.9.RELEASE.jar;E:\maven\repmaven\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-test\2.3.4.RELEASE\spring-boot-starter-test-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-test\2.3.4.RELEASE\spring-boot-test-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-test-autoconfigure\2.3.4.RELEASE\spring-boot-test-autoconfigure-2.3.4.RELEASE.jar;E:\maven\repmaven\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;E:\maven\repmaven\net\minidev\json-smart\2.3\json-smart-2.3.jar;E:\maven\repmaven\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;E:\maven\repmaven\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;E:\maven\repmaven\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;E:\maven\repmaven\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;E:\maven\repmaven\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;E:\maven\repmaven\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;E:\maven\repmaven\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;E:\maven\repmaven\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;E:\maven\repmaven\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;E:\maven\repmaven\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;E:\maven\repmaven\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;E:\maven\repmaven\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;E:\maven\repmaven\org\junit\vintage\junit-vintage-engine\5.6.2\junit-vintage-engine-5.6.2.jar;E:\maven\repmaven\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;E:\maven\repmaven\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;E:\maven\repmaven\junit\junit\4.13\junit-4.13.jar;E:\maven\repmaven\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;E:\maven\repmaven\net\bytebuddy\byte-buddy\1.10.14\byte-buddy-1.10.14.jar;E:\maven\repmaven\net\bytebuddy\byte-buddy-agent\1.10.14\byte-buddy-agent-1.10.14.jar;E:\maven\repmaven\org\objenesis\objenesis\2.6\objenesis-2.6.jar;E:\maven\repmaven\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;E:\maven\repmaven\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;E:\maven\repmaven\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;E:\maven\repmaven\org\springframework\spring-core\5.2.9.RELEASE\spring-core-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-jcl\5.2.9.RELEASE\spring-jcl-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-test\5.2.9.RELEASE\spring-test-5.2.9.RELEASE.jar;E:\maven\repmaven\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;E:\maven\repmaven\com\baomidou\mybatis-plus-boot-starter\3.4.1\mybatis-plus-boot-starter-3.4.1.jar;E:\maven\repmaven\com\baomidou\mybatis-plus\3.4.1\mybatis-plus-3.4.1.jar;E:\maven\repmaven\com\baomidou\mybatis-plus-extension\3.4.1\mybatis-plus-extension-3.4.1.jar;E:\maven\repmaven\com\baomidou\mybatis-plus-core\3.4.1\mybatis-plus-core-3.4.1.jar;E:\maven\repmaven\com\baomidou\mybatis-plus-annotation\3.4.1\mybatis-plus-annotation-3.4.1.jar;E:\maven\repmaven\com\github\jsqlparser\jsqlparser\3.2\jsqlparser-3.2.jar;E:\maven\repmaven\org\mybatis\mybatis\3.5.6\mybatis-3.5.6.jar;E:\maven\repmaven\org\mybatis\mybatis-spring\2.0.5\mybatis-spring-2.0.5.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-autoconfigure\2.3.4.RELEASE\spring-boot-autoconfigure-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-jdbc\2.3.4.RELEASE\spring-boot-starter-jdbc-2.3.4.RELEASE.jar;E:\maven\repmaven\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;E:\maven\repmaven\org\springframework\spring-jdbc\5.2.9.RELEASE\spring-jdbc-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-tx\5.2.9.RELEASE\spring-tx-5.2.9.RELEASE.jar;E:\maven\repmaven\com\alibaba\druid-spring-boot-starter\1.1.17\druid-spring-boot-starter-1.1.17.jar;E:\maven\repmaven\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;E:\maven\repmaven\mysql\mysql-connector-java\8.0.21\mysql-connector-java-8.0.21.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-devtools\2.3.4.RELEASE\spring-boot-devtools-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot\2.3.4.RELEASE\spring-boot-2.3.4.RELEASE.jar;E:\maven\repmaven\com\alibaba\druid\1.1.17\druid-1.1.17.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-configuration-processor\2.3.4.RELEASE\spring-boot-configuration-processor-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-thymeleaf\2.3.4.RELEASE\spring-boot-starter-thymeleaf-2.3.4.RELEASE.jar;E:\maven\repmaven\org\thymeleaf\thymeleaf-spring5\3.0.11.RELEASE\thymeleaf-spring5-3.0.11.RELEASE.jar;E:\maven\repmaven\org\thymeleaf\thymeleaf\3.0.11.RELEASE\thymeleaf-3.0.11.RELEASE.jar;E:\maven\repmaven\org\attoparser\attoparser\2.0.5.RELEASE\attoparser-2.0.5.RELEASE.jar;E:\maven\repmaven\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;E:\maven\repmaven\org\thymeleaf\extras\thymeleaf-extras-java8time\3.0.4.RELEASE\thymeleaf-extras-java8time-3.0.4.RELEASE.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="E:\jdk1.8\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Administrator\AppData\Local\Temp\surefire287283315233419307\surefirebooter6760755115360686230.jar C:\Users\Administrator\AppData\Local\Temp\surefire287283315233419307 2021-01-21T11-23-03_484-jvmRun1 surefire805278155163868748tmp surefire_05213150372524081361tmp"/>
+    <property name="surefire.test.class.path" value="E:\maven\SpringBoot\target\test-classes;E:\maven\SpringBoot\target\classes;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-web\2.3.4.RELEASE\spring-boot-starter-web-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter\2.3.4.RELEASE\spring-boot-starter-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-logging\2.3.4.RELEASE\spring-boot-starter-logging-2.3.4.RELEASE.jar;E:\maven\repmaven\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;E:\maven\repmaven\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;E:\maven\repmaven\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;E:\maven\repmaven\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;E:\maven\repmaven\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;E:\maven\repmaven\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;E:\maven\repmaven\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-json\2.3.4.RELEASE\spring-boot-starter-json-2.3.4.RELEASE.jar;E:\maven\repmaven\com\fasterxml\jackson\core\jackson-databind\2.11.2\jackson-databind-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\core\jackson-annotations\2.11.2\jackson-annotations-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\core\jackson-core\2.11.2\jackson-core-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.2\jackson-datatype-jdk8-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.2\jackson-datatype-jsr310-2.11.2.jar;E:\maven\repmaven\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.2\jackson-module-parameter-names-2.11.2.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-tomcat\2.3.4.RELEASE\spring-boot-starter-tomcat-2.3.4.RELEASE.jar;E:\maven\repmaven\org\apache\tomcat\embed\tomcat-embed-core\9.0.38\tomcat-embed-core-9.0.38.jar;E:\maven\repmaven\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;E:\maven\repmaven\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.38\tomcat-embed-websocket-9.0.38.jar;E:\maven\repmaven\org\springframework\spring-web\5.2.9.RELEASE\spring-web-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-beans\5.2.9.RELEASE\spring-beans-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-webmvc\5.2.9.RELEASE\spring-webmvc-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-context\5.2.9.RELEASE\spring-context-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-expression\5.2.9.RELEASE\spring-expression-5.2.9.RELEASE.jar;E:\maven\repmaven\org\projectlombok\lombok\1.18.12\lombok-1.18.12.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-actuator\2.3.4.RELEASE\spring-boot-starter-actuator-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-actuator-autoconfigure\2.3.4.RELEASE\spring-boot-actuator-autoconfigure-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-actuator\2.3.4.RELEASE\spring-boot-actuator-2.3.4.RELEASE.jar;E:\maven\repmaven\io\micrometer\micrometer-core\1.5.5\micrometer-core-1.5.5.jar;E:\maven\repmaven\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;E:\maven\repmaven\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-aop\2.3.4.RELEASE\spring-boot-starter-aop-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-aop\5.2.9.RELEASE\spring-aop-5.2.9.RELEASE.jar;E:\maven\repmaven\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-test\2.3.4.RELEASE\spring-boot-starter-test-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-test\2.3.4.RELEASE\spring-boot-test-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-test-autoconfigure\2.3.4.RELEASE\spring-boot-test-autoconfigure-2.3.4.RELEASE.jar;E:\maven\repmaven\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;E:\maven\repmaven\net\minidev\json-smart\2.3\json-smart-2.3.jar;E:\maven\repmaven\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;E:\maven\repmaven\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;E:\maven\repmaven\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;E:\maven\repmaven\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;E:\maven\repmaven\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;E:\maven\repmaven\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;E:\maven\repmaven\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;E:\maven\repmaven\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;E:\maven\repmaven\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;E:\maven\repmaven\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;E:\maven\repmaven\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;E:\maven\repmaven\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;E:\maven\repmaven\org\junit\vintage\junit-vintage-engine\5.6.2\junit-vintage-engine-5.6.2.jar;E:\maven\repmaven\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;E:\maven\repmaven\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;E:\maven\repmaven\junit\junit\4.13\junit-4.13.jar;E:\maven\repmaven\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;E:\maven\repmaven\net\bytebuddy\byte-buddy\1.10.14\byte-buddy-1.10.14.jar;E:\maven\repmaven\net\bytebuddy\byte-buddy-agent\1.10.14\byte-buddy-agent-1.10.14.jar;E:\maven\repmaven\org\objenesis\objenesis\2.6\objenesis-2.6.jar;E:\maven\repmaven\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;E:\maven\repmaven\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;E:\maven\repmaven\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;E:\maven\repmaven\org\springframework\spring-core\5.2.9.RELEASE\spring-core-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-jcl\5.2.9.RELEASE\spring-jcl-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-test\5.2.9.RELEASE\spring-test-5.2.9.RELEASE.jar;E:\maven\repmaven\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;E:\maven\repmaven\com\baomidou\mybatis-plus-boot-starter\3.4.1\mybatis-plus-boot-starter-3.4.1.jar;E:\maven\repmaven\com\baomidou\mybatis-plus\3.4.1\mybatis-plus-3.4.1.jar;E:\maven\repmaven\com\baomidou\mybatis-plus-extension\3.4.1\mybatis-plus-extension-3.4.1.jar;E:\maven\repmaven\com\baomidou\mybatis-plus-core\3.4.1\mybatis-plus-core-3.4.1.jar;E:\maven\repmaven\com\baomidou\mybatis-plus-annotation\3.4.1\mybatis-plus-annotation-3.4.1.jar;E:\maven\repmaven\com\github\jsqlparser\jsqlparser\3.2\jsqlparser-3.2.jar;E:\maven\repmaven\org\mybatis\mybatis\3.5.6\mybatis-3.5.6.jar;E:\maven\repmaven\org\mybatis\mybatis-spring\2.0.5\mybatis-spring-2.0.5.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-autoconfigure\2.3.4.RELEASE\spring-boot-autoconfigure-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-jdbc\2.3.4.RELEASE\spring-boot-starter-jdbc-2.3.4.RELEASE.jar;E:\maven\repmaven\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;E:\maven\repmaven\org\springframework\spring-jdbc\5.2.9.RELEASE\spring-jdbc-5.2.9.RELEASE.jar;E:\maven\repmaven\org\springframework\spring-tx\5.2.9.RELEASE\spring-tx-5.2.9.RELEASE.jar;E:\maven\repmaven\com\alibaba\druid-spring-boot-starter\1.1.17\druid-spring-boot-starter-1.1.17.jar;E:\maven\repmaven\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;E:\maven\repmaven\mysql\mysql-connector-java\8.0.21\mysql-connector-java-8.0.21.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-devtools\2.3.4.RELEASE\spring-boot-devtools-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot\2.3.4.RELEASE\spring-boot-2.3.4.RELEASE.jar;E:\maven\repmaven\com\alibaba\druid\1.1.17\druid-1.1.17.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-configuration-processor\2.3.4.RELEASE\spring-boot-configuration-processor-2.3.4.RELEASE.jar;E:\maven\repmaven\org\springframework\boot\spring-boot-starter-thymeleaf\2.3.4.RELEASE\spring-boot-starter-thymeleaf-2.3.4.RELEASE.jar;E:\maven\repmaven\org\thymeleaf\thymeleaf-spring5\3.0.11.RELEASE\thymeleaf-spring5-3.0.11.RELEASE.jar;E:\maven\repmaven\org\thymeleaf\thymeleaf\3.0.11.RELEASE\thymeleaf-3.0.11.RELEASE.jar;E:\maven\repmaven\org\attoparser\attoparser\2.0.5.RELEASE\attoparser-2.0.5.RELEASE.jar;E:\maven\repmaven\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;E:\maven\repmaven\org\thymeleaf\extras\thymeleaf-extras-java8time\3.0.4.RELEASE\thymeleaf-extras-java8time-3.0.4.RELEASE.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Administrator"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="E:\jdk1.8\jre"/>
+    <property name="basedir" value="E:\maven\SpringBoot"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Administrator\AppData\Local\Temp\surefire287283315233419307\surefirebooter6760755115360686230.jar"/>
+    <property name="sun.boot.class.path" value="E:\jdk1.8\jre\lib\resources.jar;E:\jdk1.8\jre\lib\rt.jar;E:\jdk1.8\jre\lib\sunrsasign.jar;E:\jdk1.8\jre\lib\jsse.jar;E:\jdk1.8\jre\lib\jce.jar;E:\jdk1.8\jre\lib\charsets.jar;E:\jdk1.8\jre\lib\jfr.jar;E:\jdk1.8\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="user.name" value="Administrator"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="6.1"/>
+    <property name="java.endorsed.dirs" value="E:\jdk1.8\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="idea.version2020.1" value="true"/>
+    <property name="localRepository" value="E:\maven\repmaven"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Administrator\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="user.dir" value="E:\maven\SpringBoot"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.library.path" value="E:\jdk1.8\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Users\Administrator\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;E:\Program Files\PuTTY\; E:\webserver\Php\ext;C:\windows\System32\WindowsPowerShell\v1.0\;D:\laravel\Git\bin;D:\laravel\virtualbox;D:\HashiCorp\Vagrant\bin;D:\python;C:\windows\System32\WindowsPowerShell\v1.0\;C:\nodejs\;E:\maven\apache-maven-3.3.9\bin;E:\tomcat\apache-tomcat-8.5.61\bin;E:\jdk1.8\bin;D:\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;E:\sql\MySQL\MySQL Server 8.0\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.ext.dirs" value="E:\jdk1.8\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="test1" classname="com.phoenixhell.test.AopTest" time="0.298">
+    <error message="/ by zero" type="java.lang.ArithmeticException">java.lang.ArithmeticException: / by zero
+	at com.phoenixhell.test.AopTest.test1(AopTest.java:24)
+</error>
+    <system-out><![CDATA[11:23:05.573 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+11:23:05.590 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+11:23:05.619 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.phoenixhell.test.AopTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+11:23:05.647 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.phoenixhell.test.AopTest], using SpringBootContextLoader
+11:23:05.650 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.phoenixhell.test.AopTest]: class path resource [com/phoenixhell/test/AopTest-context.xml] does not exist
+11:23:05.651 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.phoenixhell.test.AopTest]: class path resource [com/phoenixhell/test/AopTestContext.groovy] does not exist
+11:23:05.651 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.phoenixhell.test.AopTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:23:05.703 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.phoenixhell.test.AopTest]
+11:23:05.865 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.phoenixhell.test.AopTest]: using defaults.
+11:23:05.865 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+11:23:05.881 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4c60d6e9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@15043a2f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4a83a74a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1349883, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4b29d1d2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f485fda, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@28261e8e, org.springframework.test.context.event.EventPublishingTestExecutionListener@d737b89, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8519cb4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@35dab4eb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2d901eb0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ba987b8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3f191845, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5f049ea1]
+11:23:05.884 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+11:23:05.919 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+MyApplicationListener onApplicationEvent-----------startorg.springframework.boot.context.event.ApplicationStartingEvent[source=org.springframework.boot.SpringApplication@2e570ded]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent[source=org.springframework.boot.SpringApplication@2e570ded]
+MySpringApplicationRunListener environmentPrepared-------
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.4.RELEASE)
+
+MyApplicationContextInitializer initialize------------------start
+MyApplicationListener onApplicationEvent-----------startorg.springframework.boot.context.event.ApplicationContextInitializedEvent[source=org.springframework.boot.SpringApplication@2e570ded]
+MySpringApplicationRunListener contextPrepared-------
+2021-01-21 11:23:06.419 INFO 5316 --- [           main] com.phoenixhell.test.AopTest             : Starting AopTest on director-office with PID 5316 (started by Administrator in E:\maven\SpringBoot)
+2021-01-21 11:23:06.421 INFO 5316 --- [           main] com.phoenixhell.test.AopTest             : The following profiles are active: prod
+MyApplicationListener onApplicationEvent-----------startorg.springframework.boot.context.event.ApplicationPreparedEvent[source=org.springframework.boot.SpringApplication@2e570ded]
+MySpringApplicationRunListener contextLoaded-------
+postProcessBeanDefinitionRegistry_____________________before postProcessBeanFactory 
+postProcessBeanFactory in postProcessBeanDefinitionRegistry  
+beanFactory******************
+2021-01-21 11:23:08.246 INFO 5316 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-21 11:23:08.656 INFO 5316 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-21 11:23:08.672 INFO 5316 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.MainApplication$$EnhancerBySpringCGLIB$$bbf440bc
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.MainApplication$$EnhancerBySpringCGLIB$$438ed7c7
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.actualtor.MyEndPoint.MyCustomEndPoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.actualtor.MyEndPoint.MyCustomEndPoint$$EnhancerBySpringCGLIB$$4e7f336d
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.JdbcTemplateConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.JdbcTemplateConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$a4a0969f
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$a4a0969f
+2021-01-21 11:23:08.841 INFO 5316 --- [           main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.alibaba.druid.filter.stat.StatFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.alibaba.druid.filter.stat.StatFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.alibaba.druid.wall.WallConfig
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.alibaba.druid.wall.WallConfig
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.alibaba.druid.wall.WallFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.alibaba.druid.wall.WallFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper
+2021-01-21 11:23:09.520 INFO 5316 --- [           main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.JdbcProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.JdbcProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.jdbc.core.JdbcTemplate
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.jdbc.core.JdbcTemplate
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.actualtor.health.MyHealthInterceptor
+2021-01-21 11:23:09.610 INFO 5316 --- [           main] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final org.springframework.boot.actuate.health.Health org.springframework.boot.actuate.health.AbstractHealthIndicator.health()] because it is marked as final: Consider using interface-based JDK proxies instead!
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.actualtor.health.MyHealthInterceptor$$EnhancerBySpringCGLIB$$2f23a05d
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.actualtor.info.MyInfoContributor
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.actualtor.info.MyInfoContributor$$EnhancerBySpringCGLIB$$ccfd4de3
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.aop.MathCalculator
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.aop.MathCalculator$$EnhancerBySpringCGLIB$$5a4050b3
+当前bean的名字blue
+解析的字符串你好Windows 7 我是3600
+传入的IOCorg.springframework.web.context.support.GenericWebApplicationContext@1c32386d, started on Thu Jan 21 11:23:06 CST 2021
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.Blue
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.Blue$$EnhancerBySpringCGLIB$$5a687b3b
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.Car
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.Car$$EnhancerBySpringCGLIB$$9d5fafb3
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.Boss
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.Boss$$EnhancerBySpringCGLIB$$45b57716
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.Custom
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.Custom$$EnhancerBySpringCGLIB$$f924753a
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.MoreBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.MoreBean$$EnhancerBySpringCGLIB$$97cfa50e
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.User
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.User$$EnhancerBySpringCGLIB$$569cd644
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.config.ConfigClass
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.config.ConfigClass$$EnhancerBySpringCGLIB$$28f93d67
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.config.LifeCycleBeanConfig$$EnhancerBySpringCGLIB$$bbb4634f
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.config.LifeCycleBeanConfig$$EnhancerBySpringCGLIB$$bc34d68
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.PropertiesBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.PropertiesBean$$EnhancerBySpringCGLIB$$37037ffc
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.Clock$1
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.Clock$1
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.simple.SimpleMeterRegistry
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.simple.SimpleMeterRegistry
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.PropertiesMeterFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.PropertiesMeterFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.web.client.HttpClientMetricsAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.web.client.HttpClientMetricsAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.config.MeterFilter$9
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.config.MeterFilter$9
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.web.servlet.WebMvcMetricsAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.web.servlet.WebMvcMetricsAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.config.MeterFilter$9
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.config.MeterFilter$9
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.JvmMetricsAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.JvmMetricsAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.binder.jvm.JvmGcMetrics
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.binder.jvm.JvmGcMetrics
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.binder.jvm.JvmMemoryMetrics
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.binder.jvm.JvmMemoryMetrics
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.binder.jvm.JvmThreadMetrics
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.binder.jvm.JvmThreadMetrics
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.binder.jvm.ClassLoaderMetrics
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.binder.jvm.ClassLoaderMetrics
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.LogbackMetricsAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.LogbackMetricsAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.binder.logging.LogbackMetrics
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.binder.logging.LogbackMetrics
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.SystemMetricsAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.binder.system.UptimeMetrics
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.binder.system.UptimeMetrics
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.binder.system.ProcessorMetrics
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.binder.system.ProcessorMetrics
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class io.micrometer.core.instrument.binder.system.FileDescriptorMetrics
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class io.micrometer.core.instrument.binder.system.FileDescriptorMetrics
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.config.ConfigClass$$Lambda$633/2124360754
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer$$EnhancerBySpringCGLIB$$1b931fa2
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$c8bd0dc7
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$c8bd0dc7
+Registered plugin: 'com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor@6a0f2853'
+Parsed mapper file: 'file [E:\maven\SpringBoot\target\classes\mapper\UserMapper.xml]'
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.4.1 
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.mybatis.spring.SqlSessionTemplate
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.mybatis.spring.SqlSessionTemplate
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.mybatis.spring.mapper.MapperFactoryBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.mybatis.spring.mapper.MapperFactoryBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.sun.proxy.$Proxy105
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.service.Impl.UserServiceImpl
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.service.Impl.UserServiceImpl$$EnhancerBySpringCGLIB$$46a4791a
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.mybatis.spring.mapper.MapperFactoryBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.mybatis.spring.mapper.MapperFactoryBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.sun.proxy.$Proxy108
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.service.Impl.CustomServiceImpl
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.service.Impl.CustomServiceImpl$$EnhancerBySpringCGLIB$$536815a3
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.controller.UserController
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.controller.UserController$$EnhancerBySpringCGLIB$$e31004d4
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.listener.MyApplicationRunner
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.listener.MyApplicationRunner$$EnhancerBySpringCGLIB$$978c8b17
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.listener.MyCommandLineRunner
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.listener.MyCommandLineRunner$$EnhancerBySpringCGLIB$$f6a16ce
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.service.MoreBeanService
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.service.MoreBeanService$$EnhancerBySpringCGLIB$$226647e2
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.Yellow
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.Yellow$$EnhancerBySpringCGLIB$$aa52bd85
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.Dept
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.Dept$$EnhancerBySpringCGLIB$$f340f62e
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.aop.LogAspect
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.aop.LogAspect$$EnhancerBySpringCGLIB$$77106cf3
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.ColorFactoryBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.ColorFactoryBean$$EnhancerBySpringCGLIB$$4312d190
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.config.ConfigClass$1
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.config.ConfigClass$1$$EnhancerBySpringCGLIB$$6ce93c6c
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata
+LifeCycleBean constructor
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.LifeCycleBean
+LifeCycleBean init
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.LifeCycleBean$$EnhancerBySpringCGLIB$$e20605c9
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.AutoConfigurationPackages$BasePackages
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.AutoConfigurationPackages$BasePackages
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.websocket.servlet.TomcatWebSocketServletWebServerCustomizer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.websocket.servlet.TomcatWebSocketServletWebServerCustomizer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.ServerProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.ServerProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryCustomizer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryCustomizer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.TomcatServletWebServerFactoryCustomizer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.TomcatServletWebServerFactoryCustomizer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.DispatcherServlet
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.DispatcherServlet
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.MultipartProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.MultipartProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class javax.servlet.MultipartConfigElement
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class javax.servlet.MultipartConfigElement
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegistrationBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegistrationBean
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.task.TaskExecutionProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.task.TaskExecutionProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.task.TaskExecutorBuilder
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.task.TaskExecutorBuilder
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.view.BeanNameViewResolver
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.view.BeanNameViewResolver
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.ResourceProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.ResourceProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.error.DefaultErrorViewResolver
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.error.DefaultErrorViewResolver
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.web.servlet.error.DefaultErrorAttributes
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.web.servlet.error.DefaultErrorAttributes
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$ErrorPageCustomizer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$ErrorPageCustomizer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.metrics.web.servlet.DefaultWebMvcTagsProvider
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.metrics.web.servlet.DefaultWebMvcTagsProvider
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.web.servlet.WebMvcMetricsAutoConfiguration$MetricsWebMvcConfigurer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.web.servlet.WebMvcMetricsAutoConfiguration$MetricsWebMvcConfigurer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.accept.ContentNegotiationManager
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.accept.ContentNegotiationManager
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.format.WebConversionService
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.format.WebConversionService
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport$NoOpValidator
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport$NoOpValidator
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.http.converter.StringHttpMessageConverter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.http.converter.StringHttpMessageConverter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jackson.JacksonProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jackson.JacksonProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.fasterxml.jackson.module.paramnames.ParameterNamesModule
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.fasterxml.jackson.module.paramnames.ParameterNamesModule
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.jackson.JsonComponentModule
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.jackson.JsonComponentModule
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.fasterxml.jackson.databind.ObjectMapper
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.fasterxml.jackson.databind.ObjectMapper
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.http.HttpMessageConverters
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.http.HttpMessageConverters
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor
+2021-01-21 11:23:12.272 INFO 5316 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.alibaba.druid.spring.boot.autoconfigure.stat.DruidStatViewServletConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.alibaba.druid.spring.boot.autoconfigure.stat.DruidStatViewServletConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.web.servlet.ServletRegistrationBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.web.servlet.ServletRegistrationBean
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.resource.ResourceUrlProvider
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.resource.ResourceUrlProvider
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+2021-01-21 11:23:12.471 INFO 5316 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.util.AntPathMatcher
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.util.AntPathMatcher
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.util.UrlPathHelper
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.util.UrlPathHelper
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.beans.factory.support.NullBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.beans.factory.support.NullBean
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.function.support.RouterFunctionMapping
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.function.support.RouterFunctionMapping
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.handler.SimpleUrlHandlerMapping
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.handler.SimpleUrlHandlerMapping
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.beans.factory.support.NullBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.beans.factory.support.NullBean
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.function.support.HandlerFunctionAdapter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.function.support.HandlerFunctionAdapter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.method.support.CompositeUriComponentsContributor
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.method.support.CompositeUriComponentsContributor
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.handler.HandlerExceptionResolverComposite
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.handler.HandlerExceptionResolverComposite
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.view.ViewResolverComposite
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.view.ViewResolverComposite
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.view.InternalResourceViewResolver
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.view.InternalResourceViewResolver
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration$ThymeleafViewResolverConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration$ThymeleafViewResolverConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafDefaultConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafDefaultConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafJava8TimeDialect
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafJava8TimeDialect
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.thymeleaf.extras.java8time.dialect.Java8TimeDialect
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.thymeleaf.extras.java8time.dialect.Java8TimeDialect
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.thymeleaf.spring5.SpringTemplateEngine
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.thymeleaf.spring5.SpringTemplateEngine
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.thymeleaf.spring5.view.ThymeleafViewResolver
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.thymeleaf.spring5.view.ThymeleafViewResolver
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.servlet.view.ContentNegotiatingViewResolver
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.servlet.view.ContentNegotiatingViewResolver
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.web.servlet.filter.OrderedHiddenHttpMethodFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.web.servlet.filter.OrderedHiddenHttpMethodFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.web.servlet.filter.OrderedFormContentFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.web.servlet.filter.OrderedFormContentFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.alibaba.druid.support.spring.stat.DruidStatInterceptor
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.alibaba.druid.support.spring.stat.DruidStatInterceptor
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.alibaba.druid.spring.boot.autoconfigure.stat.DruidWebStatFilterConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.alibaba.druid.spring.boot.autoconfigure.stat.DruidWebStatFilterConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.web.servlet.FilterRegistrationBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.web.servlet.FilterRegistrationBean
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration$$Lambda$792/545266875
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration$$Lambda$792/545266875
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializationConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializationConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.baomidou.mybatisplus.autoconfigure.MybatisPlusLanguageDriverAutoConfiguration$$EnhancerBySpringCGLIB$$916fd387
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.baomidou.mybatisplus.autoconfigure.MybatisPlusLanguageDriverAutoConfiguration$$EnhancerBySpringCGLIB$$916fd387
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.availability.ApplicationAvailabilityBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.availability.ApplicationAvailabilityBean
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.availability.AvailabilityHealthContributorAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.availability.AvailabilityHealthContributorAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.beans.BeansEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.beans.BeansEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.cache.CachesEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.cache.CachesEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.cache.CachesEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.cache.CachesEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.cache.CachesEndpointWebExtension
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.cache.CachesEndpointWebExtension
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextFactory
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextFactory
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration$$Lambda$793/829985002
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration$$Lambda$793/829985002
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.LegacyHealthEndpointAdaptersConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.LegacyHealthEndpointAdaptersConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.LegacyHealthEndpointCompatibilityConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.LegacyHealthEndpointCompatibilityConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.health.OrderedHealthAggregator
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.health.OrderedHealthAggregator
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.HealthEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.health.SimpleStatusAggregator
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.health.SimpleStatusAggregator
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.health.SimpleHttpCodeStatusMapper
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.health.SimpleHttpCodeStatusMapper
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.AutoConfiguredHealthEndpointGroups
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.AutoConfiguredHealthEndpointGroups
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthContributorAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthContributorAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.system.DiskSpaceHealthIndicator
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.system.DiskSpaceHealthIndicator
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.HealthContributorAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.HealthContributorAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.health.PingHealthIndicator
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.health.PingHealthIndicator
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthContributorAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthContributorAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.AutoConfiguredHealthContributorRegistry
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.AutoConfiguredHealthContributorRegistry
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.HealthContributorRegistryHealthIndicatorRegistryAdapter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.HealthContributorRegistryHealthIndicatorRegistryAdapter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.health.HealthEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.health.HealthEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.health.HealthEndpointWebExtensionConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.health.HealthEndpointWebExtension
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.health.HealthEndpointWebExtension
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.info.InfoContributorAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.info.EnvironmentInfoContributor
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.info.EnvironmentInfoContributor
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.info.InfoEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.info.InfoEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.context.ShutdownEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.context.ShutdownEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.context.ShutdownEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.context.ShutdownEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.invoke.convert.ConversionServiceParameterValueMapper
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.invoke.convert.ConversionServiceParameterValueMapper
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvokerAdvisor
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvokerAdvisor
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration$WebEndpointServletConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration$WebEndpointServletConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.web.MappingWebEndpointPathMapper
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.web.MappingWebEndpointPathMapper
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.env.EnvironmentEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.env.EnvironmentEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.env.EnvironmentEndpointWebExtension
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.env.EnvironmentEndpointWebExtension
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.logging.LoggersEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.logging.LoggersEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.logging.LoggersEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.management.HeapDumpWebEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.management.HeapDumpWebEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.management.HeapDumpWebEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.management.ThreadDumpEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.management.ThreadDumpEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.management.ThreadDumpEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.management.ThreadDumpEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.MetricsEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.MetricsEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.metrics.MetricsEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.metrics.MetricsEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.scheduling.ScheduledTasksEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration$SpringMvcConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration$SpringMvcConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.web.mappings.servlet.DispatcherServletsMappingDescriptionProvider
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.web.mappings.servlet.DispatcherServletsMappingDescriptionProvider
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.mappings.MappingsEndpointAutoConfiguration$ServletWebConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.web.mappings.servlet.ServletsMappingDescriptionProvider
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.web.mappings.servlet.ServletsMappingDescriptionProvider
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.web.mappings.servlet.FiltersMappingDescriptionProvider
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.web.mappings.servlet.FiltersMappingDescriptionProvider
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.web.mappings.MappingsEndpoint
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.web.mappings.MappingsEndpoint
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.web.PathMappedEndpoints
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.web.PathMappedEndpoints
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.CompositeMeterRegistryAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$HikariDataSourceMetricsConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$HikariDataSourceMetricsConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration$DataSourcePoolMetadataMetricsConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.web.client.RestTemplateMetricsConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.web.client.RestTemplateMetricsConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.metrics.web.client.DefaultRestTemplateExchangeTagsProvider
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.metrics.web.client.DefaultRestTemplateExchangeTagsProvider
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.metrics.web.client.MetricsRestTemplateCustomizer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.metrics.web.client.MetricsRestTemplateCustomizer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.web.servlet.FilterRegistrationBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.web.servlet.FilterRegistrationBean
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.metrics.web.tomcat.TomcatMetricsAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.metrics.web.tomcat.TomcatMetricsBinder
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.metrics.web.tomcat.TomcatMetricsBinder
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceEndpointAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceEndpointAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration$CglibAutoProxyConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration$CglibAutoProxyConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.context.LifecycleProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.context.LifecycleProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.context.support.DefaultLifecycleProcessor
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.context.support.DefaultLifecycleProcessor
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.NamedParameterJdbcTemplateConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.NamedParameterJdbcTemplateConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.task.TaskSchedulingProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.task.TaskSchedulingProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.task.TaskSchedulerBuilder
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.task.TaskSchedulerBuilder
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebMvcConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.transaction.TransactionProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.transaction.TransactionProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.jdbc.datasource.DataSourceTransactionManager
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.jdbc.datasource.DataSourceTransactionManager
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.transaction.support.TransactionTemplate
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.transaction.support.TransactionTemplate
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$TomcatWebServerFactoryCustomizerConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$TomcatWebServerFactoryCustomizerConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration$LocaleCharsetMappingsCustomizer
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration$LocaleCharsetMappingsCustomizer
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.web.multipart.support.StandardServletMultipartResolver
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.web.multipart.support.StandardServletMultipartResolver
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.web.servlet.WebMvcEndpointManagementContextConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties
+2021-01-21 11:23:13.618 INFO 5316 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.endpoint.web.servlet.ControllerEndpointHandlerMapping
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.endpoint.web.servlet.ControllerEndpointHandlerMapping
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$EnableSameManagementContextConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$EnableSameManagementContextConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.boot.bean.RootBean
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.boot.bean.RootBean$$EnhancerBySpringCGLIB$$c2e53e53
+CustomServiceImplorg.springframework.context.event.ContextRefreshedEvent[source=org.springframework.web.context.support.GenericWebApplicationContext@1c32386d, started on Thu Jan 21 11:23:06 CST 2021]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.context.event.ContextRefreshedEvent[source=org.springframework.web.context.support.GenericWebApplicationContext@1c32386d, started on Thu Jan 21 11:23:06 CST 2021]
+2021-01-21 11:23:13.793 INFO 5316 --- [           main] com.phoenixhell.test.AopTest             : Started AopTest in 7.862 seconds (JVM running for 9.311)
+CustomServiceImplorg.springframework.boot.context.event.ApplicationStartedEvent[source=org.springframework.boot.SpringApplication@2e570ded]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.boot.context.event.ApplicationStartedEvent[source=org.springframework.boot.SpringApplication@2e570ded]
+CustomServiceImplorg.springframework.boot.availability.AvailabilityChangeEvent[source=org.springframework.web.context.support.GenericWebApplicationContext@1c32386d, started on Thu Jan 21 11:23:06 CST 2021]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.boot.availability.AvailabilityChangeEvent[source=org.springframework.web.context.support.GenericWebApplicationContext@1c32386d, started on Thu Jan 21 11:23:06 CST 2021]
+MySpringApplicationRunListener stared-------
+MyApplicationRunner run-----------------------args:org.springframework.boot.DefaultApplicationArguments@421d54b3
+MyCommandLineRunner ---------run->>>>>>>>>
+CustomServiceImplorg.springframework.boot.context.event.ApplicationReadyEvent[source=org.springframework.boot.SpringApplication@2e570ded]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.boot.context.event.ApplicationReadyEvent[source=org.springframework.boot.SpringApplication@2e570ded]
+CustomServiceImplorg.springframework.boot.availability.AvailabilityChangeEvent[source=org.springframework.web.context.support.GenericWebApplicationContext@1c32386d, started on Thu Jan 21 11:23:06 CST 2021]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.boot.availability.AvailabilityChangeEvent[source=org.springframework.web.context.support.GenericWebApplicationContext@1c32386d, started on Thu Jan 21 11:23:06 CST 2021]
+MySpringApplicationRunListener running-------
+postProcessBeforeInitialization>>>>>>>>>>>>>>>>>>>class com.phoenixhell.test.AopTest
+postProcessAfterInitialization<<<<<<<<<<<<<<<<<class com.phoenixhell.test.AopTest
+CustomServiceImplorg.springframework.test.context.event.PrepareTestInstanceEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.test.context.event.PrepareTestInstanceEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+CustomServiceImplorg.springframework.test.context.event.BeforeTestMethodEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = test1@AopTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.test.context.event.BeforeTestMethodEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = test1@AopTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+CustomServiceImplorg.springframework.test.context.event.BeforeTestExecutionEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = test1@AopTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.test.context.event.BeforeTestExecutionEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = test1@AopTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+除法div开始 参数列表是[2, 0]
+除法div异常 参数列表是[2, 0] 异常报告java.lang.ArithmeticException: / by zero
+除法div结束 参数列表是[2, 0]
+CustomServiceImplorg.springframework.test.context.event.AfterTestExecutionEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = test1@AopTest, testException = java.lang.ArithmeticException: / by zero, mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.test.context.event.AfterTestExecutionEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = test1@AopTest, testException = java.lang.ArithmeticException: / by zero, mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+CustomServiceImplorg.springframework.test.context.event.AfterTestMethodEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = test1@AopTest, testException = java.lang.ArithmeticException: / by zero, mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+MyApplicationListener onApplicationEvent-----------startorg.springframework.test.context.event.AfterTestMethodEvent[source=[DefaultTestContext@16eb3ea3 testClass = AopTest, testInstance = com.phoenixhell.test.AopTest@644a3add, testMethod = test1@AopTest, testException = java.lang.ArithmeticException: / by zero, mergedContextConfiguration = [WebMergedContextConfiguration@273444fe testClass = AopTest, locations = '{}', classes = '{class com.phoenixhell.boot.MainApplication, class com.phoenixhell.boot.MainApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3349e9bb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@49e53c76, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1aafa419, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6771beb3, org.springframework.boot.test.context.SpringBootTestArgs@1], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]]
+]]></system-out>
+  </testcase>
+</testsuite>

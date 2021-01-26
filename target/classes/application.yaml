@@ -1,0 +1,86 @@
+
+user:
+  username: 柠xscsd檬
+  password: fusdfdfck
+  dept: {id: 1,name: 人事部sdfdsf}
+person:
+  name: "小花"
+
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true  #开启页面表单的Rest功能
+    contentnegotiation:
+      favor-parameter: true #开启请求参数内容协商模式 format="x-gugui"
+#    servlet:
+#      path: / patch of dispatcherservlet
+  servlet:
+    multipart:
+      max-file-size: 100MB
+  datasource:
+    url: jdbc:mysql://localhost/test?serverTimezone=UTC
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 159629zxc
+    druid:
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: 123456
+        url-pattern: /druid/*
+        reset-enable: false
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+      aop-patterns: com.phoenixhell.boot.*
+      filters: wall,stat,slf4j
+      filter:
+        stat:
+          slow-sql-millis: 1000
+          log-slow-sql: true
+          enabled: true
+        wall:
+          enabled: true
+          config:
+            drop-table-allow: false
+  jdbc:
+    template:
+      query-timeout: 3
+  #激活prod 环境 所有相同变量环境到prod 获取
+  profiles:
+    active: prod
+#    group.myprod[0]=ppd
+#    static-path-pattern: /static/  静态资源都要带上前缀
+#server:
+#  servlet:
+logging:
+  pattern:
+    level: INFO
+#    context-path: /api
+#mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml 不用写这个文件
+#  mapper-locations: classpath:mybatis/mapper/*.xml
+#  configuration:
+#    map-underscore-to-camel-case: true
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+info:
+  app-version: 1.0.0
+  app-name: phoenixhell
+  mavenProjectName: 1.0-SNAPSHOT
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
